@@ -1,14 +1,3 @@
-
-            CREATE TABLE MOREINFO_PRED_tuberculosis (
-                GI_number INT PRIMARY KEY,
-                GenBank_ID VARCHAR(50),
-                Gene_name VARCHAR(50),
-                Organism VARCHAR(100),
-                Compound VARCHAR(200),
-                NCBI_annotation TEXT
-            );
-            
-
                 INSERT INTO MOREINFO_PRED_tuberculosis (GI_number, GenBank_ID, Gene_name, Organism, Compound, NCBI_annotation)
                 VALUES (685944724, 'WP_031673423.1', 'ctpD', 'Mycobacterium tuberculosis', 'Cobalt (Co), Nickel (Ni)', ' heavy metal translocating P-type ATPase ');
                 

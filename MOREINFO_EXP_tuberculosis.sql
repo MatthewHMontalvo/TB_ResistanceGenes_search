@@ -1,0 +1,17 @@
+-- SQL Insert commands for table: MOREINFO_EXP_tuberculosis
+
+INSERT INTO MOREINFO_EXP_tuberculosis (id, gene_name, protein_id, organism, location, associated_metals) VALUES ('BAC0003', 'acn', 'O53166', 'Mycobacterium tuberculosis H37Rv', 'Chromosome', 'Iron (Fe)\');
+INSERT INTO MOREINFO_EXP_tuberculosis (id, gene_name, protein_id, organism, location, associated_metals) VALUES ('BAC0048', 'bfrA', 'P63697', 'Mycobacterium tuberculosis', 'Chromosome', 'Iron (Fe)\');
+INSERT INTO MOREINFO_EXP_tuberculosis (id, gene_name, protein_id, organism, location, associated_metals) VALUES ('BAC0071', 'cmtR', 'P67731', 'Mycobacterium tuberculosis', 'Chromosome', 'Cobalt (Co), Nickel (Ni)\');
+INSERT INTO MOREINFO_EXP_tuberculosis (id, gene_name, protein_id, organism, location, associated_metals) VALUES ('BAC0098', 'ctpC', 'P0A502', 'Mycobacterium tuberculosis', 'Chromosome', 'Manganese (Mn), Zinc (Zn)\');
+INSERT INTO MOREINFO_EXP_tuberculosis (id, gene_name, protein_id, organism, location, associated_metals) VALUES ('BAC0100', 'ctpG', 'P63689', 'Mycobacterium tuberculosis', 'Chromosome', 'Copper (Cu)\');
+INSERT INTO MOREINFO_EXP_tuberculosis (id, gene_name, protein_id, organism, location, associated_metals) VALUES ('BAC0101', 'ctpV', 'P77894', 'Mycobacterium tuberculosis', 'Chromosome', 'Copper (Cu)\');
+INSERT INTO MOREINFO_EXP_tuberculosis (id, gene_name, protein_id, organism, location, associated_metals) VALUES ('BAC0171', 'furA', 'P0A582', 'Mycobacterium tuberculosis', 'Chromosome', 'Iron (Fe)\');
+INSERT INTO MOREINFO_EXP_tuberculosis (id, gene_name, protein_id, organism, location, associated_metals) VALUES ('BAC0498', 'ideR', 'P0A672', 'Mycobacterium tuberculosis', 'Chromosome', 'Iron (Fe), Hydrogen Peroxide (H2O2) [class: Peroxides], Plumbagin [class: Naphthoquinone]\');
+INSERT INTO MOREINFO_EXP_tuberculosis (id, gene_name, protein_id, organism, location, associated_metals) VALUES ('BAC0201', 'kmtR', 'O53838', 'Mycobacterium tuberculosis', 'Chromosome', 'Nickel (Ni), Cobalt (Co)\');
+INSERT INTO MOREINFO_EXP_tuberculosis (id, gene_name, protein_id, organism, location, associated_metals) VALUES ('BAC0206', 'mctB', 'P64883', 'Mycobacterium tuberculosis', 'Chromosome', 'Copper (Cu)\');
+INSERT INTO MOREINFO_EXP_tuberculosis (id, gene_name, protein_id, organism, location, associated_metals) VALUES ('BAC0480', 'mmco', 'O53858', 'Mycobacterium tuberculosis', 'Chromosome', 'Copper (Cu)\');
+INSERT INTO MOREINFO_EXP_tuberculosis (id, gene_name, protein_id, organism, location, associated_metals) VALUES ('BAC0249', 'mmR', 'P69926', 'Mycobacterium tuberculosis', 'Chromosome', 'Tetraphenylphosphonium (TPP) [class: Quaternary Ammonium Compounds (QACs)], Acriflavine [class: Acridine], Ethidium Bromide [class: Phenanthridine], Safranin O [class: Azin], Pyronin Y [class: Xanthene]\');
+INSERT INTO MOREINFO_EXP_tuberculosis (id, gene_name, protein_id, organism, location, associated_metals) VALUES ('BAC0262', 'mymT', 'P0CI28', 'Mycobacterium tuberculosis', 'Chromosome', 'Copper (Cu), Nickel (Ni), Zinc (Zn)\');
+INSERT INTO MOREINFO_EXP_tuberculosis (id, gene_name, protein_id, organism, location, associated_metals) VALUES ('BAC0281', 'nmtR', 'O69711', 'Mycobacterium tuberculosis', 'Chromosome', 'Nickel (Ni), Cadmium (Cd), Lead (Pb)\');
+INSERT INTO MOREINFO_EXP_tuberculosis (id, gene_name, protein_id, organism, location, associated_metals) VALUES ('BAC0333', 'ricR', 'O07434', 'Mycobacterium tuberculosis H37Rv', 'Chromosome', 'Copper (Cu)\');

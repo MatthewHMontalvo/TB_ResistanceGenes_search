@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tuberculosis Resistance Gene Finder</title>
     <link rel="stylesheet" href="/mmontal4/practical_project/CSSfinalprojectTB.css">
-    <script src="/mmontal4/practical_project/JSfinalprojectTB.js" defer></script>
 </head>
 
 
@@ -14,28 +13,23 @@
         <h1>Tuberculosis Resistance Gene Finder</h1>
     </header>
 
-
     <main>
         <!-- Search by Gene Name -->
-        <form action="/mmontal4/practical_project/PYfinalprojectTB.py" method="post">
+        <form action="/mmontal4/practical_project/PYfinalprojectTB.cgi" method="post">
             <label for="gene_name">Search by Gene Name:</label>
-            <input type="text" id="gene_name" name="gene_name" placeholder="Enter gene name" autocomplete="on">
+            <input type="search" id="gene_name" name="gene_name" placeholder="Enter gene name" autocomplete="on">
             <ul id="suggestions" class="suggestions"></ul>
             <input type="submit" value="Search">
         </form>
 
         <!-- Search by FASTA Sequence -->
-        <form action="/mmontal4/practical_project/PYfinalprojectTB.py" method="get">
+
+        <form action="/mmontal4/practical_project/PYfinalprojectTB.cgi" method="get">
             <label for="sequence">Search by FASTA Sequence:</label>
             <textarea id="sequence" name="sequence" rows="5" placeholder="Enter FASTA sequence here"></textarea>
             <input type="submit" value="Search">
         </form>
 
-        <!-- Results -->
-        <div id="results">
-            <!-- Results will be displayed here -->
-            <h2></h2>
-            <!-- Python script will input results here -->
         </div>
     </main>
 </body>

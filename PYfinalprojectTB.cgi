@@ -43,8 +43,11 @@ except mysql.connector.Error as err:
     exit()
 
 # Prepare data for the template
-exp_entries = []
-pred_entries = []
+exp_columns = []  # Column headers for experimental results
+exp_results = []  # Rows of experimental results
+
+pred_columns = []  # Column headers for predicted results
+pred_results = []  # Rows of predicted results
 
 query = """
 SELECT * FROM {} WHERE gene_name LIKE %s;
@@ -53,19 +56,19 @@ SELECT * FROM {} WHERE gene_name LIKE %s;
 try:
     curs = conn.cursor()
     search_pattern = f'%{gene_name}%' if gene_name else ("%" + gene_name + "%")
-
-    # Search in EXP_tuberculosis
+    
+    # Fetch data from EXP_tuberculosis
     curs.execute(query.format("EXP_tuberculosis"), (search_pattern,))
-    for row in curs.fetchall():
-        exp_entries.append(dict(zip([col[0] for col in curs.description], row)))
+    exp_columns = [col[0] for col in curs.description]  # Extract column headers
+    exp_results = curs.fetchall()  # Fetch all rows as lists
 
-    # Search in PRED_tuberculosis
+    # Fetch data from PRED_tuberculosis
     curs.execute(query.format("PRED_tuberculosis"), (search_pattern,))
-    for row in curs.fetchall():
-        pred_entries.append(dict(zip([col[0] for col in curs.description], row)))
+    pred_columns = [col[0] for col in curs.description]  # Extract column headers
+    pred_results = curs.fetchall()  # Fetch all rows as lists
 
 
-    if not exp_entries and not pred_entries:
+    if not exp_results and not pred_results:
         # No results found, display query details
         print("Content-Type: text/html\n\n")
         print(f"""
@@ -116,9 +119,11 @@ finally:
 # Render template with data
 print("Content-Type: text/html\n\n")
 print(template.render(
-    gene_name=gene_name,
-    exp_results=exp_entries,
-    pred_results=pred_entries,
+   gene_name=gene_name,
+    exp_columns=exp_columns,
+    exp_results=exp_results,
+    pred_columns=pred_columns,
+    pred_results=pred_results,
 ))
 
 

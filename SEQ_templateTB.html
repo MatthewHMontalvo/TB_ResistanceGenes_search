@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuberculosis Resistance Sequence Match Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            background-color: #ADD8E6;
+            text-align: center;
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        .no-results {
+            text-align: center;
+            font-weight: bold;
+            color: red;
+        }
+        .loading-message {
+            text-align: center;
+            font-size: 1.5em;
+            color: #007BFF;
+        }
+        .hidden {
+            display: none;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+            word-wrap: break-word; /* Enable word wrapping */
+            max-width: 645px; /* Limit column width to prevent horziontal scrolling*/
+        }
+    </style>
+    <script>
+        // Show the loading message for EXP sequences
+        function showExpLoading() {
+            document.getElementById('loading-exp').classList.remove('hidden');
+        }
+        
+        // Show the loading message for PRED sequences
+        function showPredLoading() {
+            document.getElementById('loading-pred').classList.remove('hidden');
+        }
+        
+        // Hide loading messages after results are loaded
+        function hideLoadingMessages() {
+            document.getElementById('loading-exp').classList.add('hidden');
+            document.getElementById('loading-pred').classList.add('hidden');
+            document.getElementById('results').classList.remove('hidden');
+        }
+    </script>
+</head>
+    <h1>Tuberculosis Resistance Sequence Match Results</h1>
+
+    <!-- Loading Messages -->
+    <div id="loading-exp" class="loading-message">
+        Please wait, aligning with experimental sequences...
+    </div>
+    <div id="loading-pred" class="loading-message hidden">
+        Please wait, aligning with predicted sequences...
+    </div>
+
+    <!-- Content -->
+    <div id="results" class="hidden">
+        <!-- User Input Display -->
+        <div class="container">
+            <p><strong>Input Sequence:</strong> {{ user_sequence }}</p>
+        </div>
+
+        <!-- Experimental Results Section -->
+        {% if exp_alignment_results %}
+            <h2>Top 5 Experimental Matches</h2>
+            <table>
+                <tr>
+                    <th>Score</th>
+                    <th>Sequence ID</th>
+                    <th>Gene Name</th>
+                    <th>Sequence</th>
+                    
+                </tr>
+                {% for result in exp_alignment_results %}
+                    <tr>
+                        <td>{{ result[3] }}</td>
+                        <td>{{ result[0] }}</td>
+                        <td>{{ result[1] }}</td>
+                        <td>{{ result[2] }}</td>
+                        
+                    </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p class="no-results">No matches found in experimental sequences</p>
+        {% endif %}
+
+        <!-- Predicted Results Section -->
+        {% if pred_alignment_results %}
+            <h2>Top 5 Predicted Matches</h2>
+            <table>
+                <tr>
+                    <th>Score</th>
+                    <th>Ref ID</th>
+                    <th>Gene Name</th>
+                    <th>Sequence</th>
+                    
+                </tr>
+                {% for result in pred_alignment_results %}
+                    <tr>
+                        <td>{{ result[3] }}</td>
+                        <td>{{ result[0] }}</td>
+                        <td>{{ result[1] }}</td>
+                        <td>{{ result[2] }}</td>
+                        
+                    </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p class="no-results">No matches found in predicted sequences</p>
+        {% endif %}
+    </div>
+
+    <script>
+        hideLoadingMessages(); // Hide loading messages after results load
+    </script>
+</body>
+</html>

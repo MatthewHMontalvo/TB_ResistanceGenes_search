@@ -61,7 +61,7 @@
 
     <!-- Experimental Results Section -->
     {% if exp_results %}
-        <h2>Matches in Experimentally Confirmed TB Resistance Genes</h2>
+        <h2>Gene Matches in Experimentally Confirmed TB Resistance Genes</h2>
         <table>
             <tr>
                 {% for column in exp_columns %}
@@ -77,12 +77,12 @@
             {% endfor %}
         </table>
     {% else %}
-        <p>No matches found in Experimentally Confirmed TB Resistance Genes.</p>
+        <p>No Gene matches found in Experimentally Confirmed TB Resistance Genes.</p>
     {% endif %}
 
     <!-- Predicted Results Section -->
     {% if pred_results %}
-        <h2>Matches in Predicted TB Resistance Genes</h2>
+        <h2>Gene Matches in Predicted TB Resistance Genes</h2>
         <table>
             <tr>
                 {% for column in pred_columns %}
@@ -98,7 +98,7 @@
             {% endfor %}
         </table>
     {% else %}
-        <p>No matches found in Predicted TB Resistance Genes.</p>
+        <p>No Gene matches found in Predicted TB Resistance Genes.</p>
     {% endif %}
 
     <br>

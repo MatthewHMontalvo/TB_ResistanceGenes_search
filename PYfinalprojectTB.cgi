@@ -82,7 +82,7 @@ try:
         <body>
             <h1>No Results Found</h1>
             <p>Searched using the following query:</p>
-            <p>With parameter: {search_pattern}</p>
+            <p>With parameter: {gene_name}</p>
             <a href="/mmontal4/practical_project/HTMLfinalprojectTB.html">Search again</a>
         </body>
         </html>

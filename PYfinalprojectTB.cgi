@@ -42,7 +42,7 @@ except mysql.connector.Error as err:
     """)
     exit()
 
-# Prepare data for the template
+# Store data in appropriate variables for the template
 exp_columns = []  # Column headers for experimental results
 exp_results = []  # Rows of experimental results
 

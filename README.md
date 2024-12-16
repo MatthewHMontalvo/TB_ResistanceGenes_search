@@ -15,17 +15,20 @@ http://bfx3.aap.jhu.edu/mmontal4/practical_project/HTMLfinalprojectTB.html
 
 
 The application includes the following key functionalities:
+
 1	A search interface to query a user’s gene (or genes) of interest and compare them against the BacMet Resistance Genes Database.
 
 2	A FASTA-based search function to identify the top 5 best-matching genes, with detailed results on associated resistance genes.
 
 
 *REQUIREMENTS *
-	•	Dependencies: Python 3, Jinja2 for templating, MySQL for database management, Bio.Seq and Bio.Align for sequence alignment and scoring.
-	•	Storage: Minimal storage is required for query inputs, but sufficient space is needed for storing genome data.
+
+•	Dependencies: Python 3, Jinja2 for templating, MySQL for database management, Bio.Seq and Bio.Align for sequence alignment and scoring.
+•	Storage: Minimal storage is required for query inputs, but sufficient space is needed for storing genome data.
 
 
 *PROGRAM USAGE *
+
 1	Gene Search
 	◦	Enter a gene name or keyword into the search box.
 	◦	Click "Search" to query the database for matching gene records.
@@ -49,10 +52,11 @@ Reference: BacMet Resistance Genes Database: https://bacmet.biomedicine.gu.se/
 
 *ACKNOWLEDGEMENTS *
 This project is powered by:
-	•	MySQL for efficient database management.
-	•	BacMet for antibiotic resistance genes and annotations.
-	•	Python and Jinja2 for backend scripting and web template rendering.
-	•	Bio.Align package for alignment scoring - https://biopython.org/docs/1.75/api/Bio.Align.html
+
+•	MySQL for efficient database management.	
+•	BacMet for antibiotic resistance genes and annotations.
+•	Python and Jinja2 for backend scripting and web template rendering.
+•	Bio.Align package for alignment scoring - https://biopython.org/docs/1.75/api/Bio.Align.html
 
 
 *REFERENCES *

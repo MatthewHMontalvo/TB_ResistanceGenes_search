@@ -72,7 +72,8 @@ This project is powered by:
 •
 •
 *REFERENCES *
-BacMet. (2018). BacMet: Antibacterial Biocide and Metal Resistance Genes Database. Biomedicine.gu.se. http://bacmet.biomedicine.gu.se/index.html
+
+•	BacMet. (2018). BacMet: Antibacterial Biocide and Metal Resistance Genes Database. Biomedicine.gu.se. http://bacmet.biomedicine.gu.se/index.html
 
 
 
